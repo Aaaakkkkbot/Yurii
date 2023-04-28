@@ -43,7 +43,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            await message.reply_sticker("CAACAgUAAxkBAAIICmQQSQePVWrfPvLdSjLD8BtX2-v6AAIHCwACTsdAV-DQib9ppos5LwQ")
+            await CAACAgUAAx0CXd51wwACBrNkS6c3sx280yxPtRhFCtniFup26gACOAgAAiOMOFaFynqrwW54Qi8E
             return await message.reply_photo(
                        photo=config.START_IMG_URL,
                        caption=_["help_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
@@ -88,7 +88,7 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/pagal_faimly) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
+                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/YurriSupport) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                     else:
                         msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
@@ -138,7 +138,7 @@ async def start_comm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎")
+            m = await message.reply_text("⚡")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -173,7 +173,7 @@ async def start_comm(client, message: Message, _):
                             text="𝗬𝗼𝘂𝗧𝘂𝗯𝗲", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/feelings_of_lav"
+                            text="𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/YurriSupport"
                         ),
                     ],
                 ]
@@ -202,7 +202,7 @@ async def start_comm(client, message: Message, _):
         out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
-                await message.reply_sticker("CAACAgQAAxkBAAIICGQQSNoZhjlg1BkCt5mjWVM5IGR6AAI0GAACKnLEDDdVuyxE_As1LwQ")
+                await message.reply_sticker("CAACAgUAAx0CXd51wwACBrNkS6c3sx280yxPtRhFCtniFup26gACOAgAAiOMOFaFynqrwW54Qi8E")
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
